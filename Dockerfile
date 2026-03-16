@@ -23,6 +23,7 @@ COPY package.json bun.lock* ./
 RUN bun install --frozen-lockfile
 
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/vite.config.ts ./vite.config.ts
 
 EXPOSE 8080
 
