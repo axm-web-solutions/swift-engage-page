@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    expose:
+      - "8080"
+    # Sin 'ports' para no mapear al host; el puerto 8080 queda expuesto en la red interna
